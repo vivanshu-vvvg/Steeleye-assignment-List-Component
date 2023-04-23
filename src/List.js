@@ -7,7 +7,7 @@ const WrappedSingleListItem = ({ index, isSelected, text, currBtn, onClickHandle
         return (
             <>
                 <li
-                    style={{ backgroundColor: isSelected ? "orange" : "red", letterSpacing: '0.8', border: '2px solid black', listStyleType: 'none', margin: '5px', height: '35px', textAlign: 'center', fontWeight: 700, cursor: 'pointer' }}
+                    style={{ backgroundColor: isSelected ? "green" : "red", letterSpacing: '0.8', border: '2px solid black', listStyleType: 'none', margin: '5px', height: '35px', textAlign: 'center', fontWeight: 700, cursor: 'pointer' }}
                     onClick={() => onClickHandler(index)} 
                 >
                     {text}
@@ -95,7 +95,6 @@ const WrappedListComponent = ({ items }, props) => {
 
     return (
         <>
-        <div id='divmain'>
         <ul style={{ textAlign: "left", marginTop: '40px',paddingRight:'35px'}}>
             {items.map((item, index) => (
                 <SingleListItem
@@ -112,16 +111,15 @@ const WrappedListComponent = ({ items }, props) => {
         <div className="container" style={{
             margin: 'auto',
             width: '20%',
-            marginRight: '1050px',
+            marginRight: '100px',
             padding: '50px',
             display: 'flex',
             justifyContent: 'space-between'
         }}>
 
-<button type="button" onClick={onClickSingle} id='singleBtn' style={currBtn==='single'?{border:'6px solid black'}:{border:'none'}} class="btn btn-success mx-2">Single</button>
-            <button type="button" onClick={onClickMultiple} style={currBtn==='multiple'?{border:'6px solid black'}:{border:'none'}} id='multiBtn'class="btn btn-danger mx-2">Multiple</button>
-            <button type="button" onClick={onClickClear} style={currBtn==='clear'?{border:'6px solid black'}:{border:'none'}} id='clearBtn'class="btn btn-warning mx-2">Clear</button>
-        </div>
+<button type="button" onClick={onClickSingle}  style={currBtn==='single'?{border:'6px solid black'}:{border:'none'}} class="btn btn-success mx-2">Single</button>
+            <button type="button" onClick={onClickMultiple} style={currBtn==='multiple'?{border:'6px solid black'}:{border:'none'}} class="btn btn-danger mx-2">Multiple</button>
+            <button type="button" onClick={onClickClear} style={currBtn==='clear'?{border:'6px solid black'}:{border:'none'}} class="btn btn-warning mx-2">Clear</button>
         </div>
         </>
     );
@@ -138,25 +136,25 @@ WrappedListComponent.propTypes = {
 WrappedListComponent.defaultProps = {
     items: [
         {
-          text: "Attack On Titan",
+          text: "Taj Mahal",
         },
         {
-          text: "Demon Slayer",
+          text: "Red Fort",
         },
         {
-          text: "Death Note",
+          text: "Gateway Of India",
         },
         {
-          text: "One Piece",
+          text: "Dadra and Nagar Haveli",
         },
         {
-          text: "Naruto",
+          text: "Qutub Minar",
         },
         {
-          text: "Jujutsu Kaisen",
+          text: "Ajanta and Elora caves",
         },
         {
-          text: "My Hero Academia",
+          text: "India Gate",
         },
       ]
 };
